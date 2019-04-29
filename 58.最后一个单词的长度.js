@@ -8,7 +8,6 @@
  * @return {number}
  */
 var lengthOfLastWord = function (s) {
-    console.log(s);
     return s ? s.trim().split(' ').pop().length : 0
 };
 

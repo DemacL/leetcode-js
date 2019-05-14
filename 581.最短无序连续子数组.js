@@ -34,7 +34,6 @@ var findUnsortedSubarray1 = function (nums) {
 
 
 var findUnsortedSubarray = function (nums) {
-
     let high = 0;// 第一个大值不正确的索引
     let low = 1; // 第一个小值不正确的索引
     let maxValue;// 记录从左到右的当前最大值
@@ -49,8 +48,6 @@ var findUnsortedSubarray = function (nums) {
             maxValue = Math.max(maxValue, nums[i]);
         }
     }
-    console.log(high);
-
     for (let i = nums.length - 1; i >= 0; i--) {
         if (i === nums.length - 1) {
             minValue = nums[i];
@@ -61,7 +58,6 @@ var findUnsortedSubarray = function (nums) {
             minValue = Math.min(minValue, nums[i]);
         }
     }
-    console.log(low);
     return high - low + 1;
 };
 
